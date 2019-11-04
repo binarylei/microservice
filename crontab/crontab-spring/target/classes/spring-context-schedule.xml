@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <bean id="scheduledXmlTest" class="ScheduledXmlTest"/>
+
+    <!--定时调度@Scheduled-->
+    <task:scheduler id="taskScheduler" pool-size="2"/>
+    <task:scheduled-tasks scheduler="taskScheduler">
+        <task:scheduled ref="scheduledXmlTest" method="fixedDelay" fixed-delay="2000"/>
+        <task:scheduled ref="scheduledXmlTest" method="fixedRate" fixed-rate="2000"/>
+        <task:scheduled ref="scheduledXmlTest" method="cron" cron="0/2 * * * * *"/>
+    </task:scheduled-tasks>
+
+    <!--异步调度@Async-->
+    <task:executor id="executor" pool-size="2"/>
+    <!--注解驱动-->
+    <task:annotation-driven executor="executor" scheduler="taskScheduler"/>
+</beans>

@@ -1,0 +1,4 @@
+binarylei\redisson\single\SingleTest.class
+binarylei\redisson\lock\LockTest.class
+binarylei\redisson\sentinel\SentinelTest.class
+binarylei\redisson\cluster\ClusterTest.class
