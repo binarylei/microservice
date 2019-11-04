@@ -5,15 +5,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>binarylei.crontab</groupId>
-    <artifactId>crontab</artifactId>
+    <artifactId>scheduler</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
     <modules>
-        <module>crontab-quartz</module>
-        <module>crontab-spring</module>
-        <module>crontab-quartz-spring</module>
-        <module>crontab-quartz-springboot</module>
+        <module>sched-quartz</module>
+        <module>sched-spring</module>
+        <module>sched-quartz-spring</module>
+        <module>sched-quartz-springboot</module>
+        <module>sched-jdk</module>
     </modules>
 
     <properties>

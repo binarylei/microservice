@@ -3,11 +3,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>crontab</artifactId>
+        <artifactId>scheduler</artifactId>
         <groupId>binarylei.crontab</groupId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>crontab-quartz-springboot</artifactId>
+    <artifactId>sched-quartz-springboot</artifactId>
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
