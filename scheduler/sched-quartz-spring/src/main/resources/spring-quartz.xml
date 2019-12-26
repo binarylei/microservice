@@ -48,9 +48,9 @@
         <!--指定Trigger的延迟时间 1s后运行-->
         <property name="startDelay" value="1000"/>
         <!--指定Trigger的重复间隔  5s-->
-        <property name="repeatInterval" value="5000"/>
+        <property name="repeatInterval" value="10000"/>
         <!--指定Trigger的重复次数-->
-        <property name="repeatCount" value="2"/>
+        <property name="repeatCount" value="20"/>
     </bean>
 
     <!-- 2.2：定义触发器的bean，定义一个Cron的Trigger，一个触发器只能和一个任务进行绑定 -->
@@ -62,7 +62,7 @@
         <!-- 指定Tirgger绑定的Job -->
         <property name="jobDetail" ref="myJob2"/>
         <!-- 指定Cron 的表达式 ，当前是每隔1s运行一次 -->
-        <property name="cronExpression" value="0/1 * * * * ?"/>
+        <property name="cronExpression" value="0 */1 * * * ?"/>
     </bean>
 
     <!-- 3.1 定义调度器，并将Trigger注册到调度器中。这种方式，任务只会存储到RAM。-->

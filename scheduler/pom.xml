@@ -15,6 +15,9 @@
         <module>sched-quartz-spring</module>
         <module>sched-quartz-springboot</module>
         <module>sched-jdk</module>
+        <module>sched-elasticjob</module>
+        <module>elasticjob-spring-boot-starter</module>
+        <module>sched-elasticjob-springboot</module>
     </modules>
 
     <properties>
@@ -30,6 +33,12 @@
                 <scope>import</scope>
                 <type>pom</type>
                 <version>2.1.8.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>elastic-job-lite-core</artifactId>
+                <version>2.1.5</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
